@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Harsh Patel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul>
+        <li style="float:left"> <button class="navButton" onclick="displayHome()">Harsh Patel</button> </li>
+        <li><button class="navButton" onclick="displayContact()">Contact</button></li>
+        <li><button class="navButton" onclick="displayProjects()">Projects</button></li>
+        <li><button class="navButton" onclick="displayAbout()">About</button></li>
+    </ul>
+
+    <script>
+        let active =  'home'
+        function displayHome() {
+            document.getElementById(active).style.display = "none";
+            document.getElementById('home').style.display = 'inline';
+            active = 'home'
+        }
+
+        function displayAbout() {
+            document.getElementById(active).style.display = "none";
+            document.getElementById('about').style.display = 'inline';
+            active = 'about'
+        }
+
+        function displayProjects() {
+            document.getElementById(active).style.display = "none";
+            document.getElementById('projects').style.display = 'inline';
+            active = 'projects'
+        }
+
+        function displayContact() {
+            document.getElementById(active).style.display = "none";
+            document.getElementById('contact').style.display = 'block';
+            active = 'contact'
+        }
+    </script>
+    <div class="home" id="home">
+        Hi Home
+    </div>
+    <div class="about" id="about">
+        Hi About
+    </div>
+    <div class="projects" id="projects">
+        <div class="projectsGallery">
+
+        </div>
+    </div>
+    <div class="contact" id="contact">
+        <div class="contactForm">
+            <input type='text' placeholder="First Name" class="FormData" id="fname" style="width: 40%">
+            <input type='text' placeholder="Last Name" class="FormData" id="lname" style="width: 41%" >
+            <input type='text' placeholder="Email" class="FormData" id="email">
+            <input type='text' placeholder="Subject" class="FormData" id="subject">
+            <input type='text' placeholder="Message" class="FormData" id="message">
+            <input type="button" value="Submit" class="FormData" id="submt">
+        </div>
+        <div class="contactLinks">Hello</div>
+    </div>
+
+</body>
+</html>
