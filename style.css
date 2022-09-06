@@ -1,8 +1,8 @@
 :root {
     --primary: #232525;
     --seondary: #333433;
-    --text: #c66a00 ;
-    --white: #dedede;
+    --heading: #c66a00 ;
+    --text: #dedede;
 }
 
 body {
@@ -25,7 +25,7 @@ li {
 }
 
 .navButton { 
-    color: var(--text);
+    color: var(--heading);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -48,6 +48,19 @@ li {
     display: none;
     float: left;
     width: 100%;
+    padding-left: 50px;
+}
+
+H1 {
+    color: var(--heading);
+}
+
+H2 {
+    color: var(--text)
+}
+
+P {
+    color: var(--text)
 }
 
 input[type="text"] {
@@ -83,7 +96,7 @@ input[type="button"] {
 
 .FormData {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--text);
     border-width: 0px;
 }
 
@@ -95,3 +108,40 @@ input[type="button"] {
     background-color: var(--seondary);
 }
 
+.projectTile {
+    border-width: 5px;
+    background-color: #333433;
+    width: 300px;
+    height: 500px;
+    border:1px solid var(--text);
+    float: left;
+}
+
+.projectThumbnail {
+    width: 300px;
+    height: 200px;
+}
+
+.projectTools {
+    padding-top: 25px;
+    padding-left: 10px;
+}
+
+.projectTool {
+    background-color: var(--heading);
+    width:fit-content;
+    display: inline-flex;
+    padding-left: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+    margin-left: 10px;
+    margin-top: 0px;
+    border-radius: 5px;
+    height:auto;
+}
+
+.projectGallery {
+    float: left;
+    display: inline-flex;
+}
