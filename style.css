@@ -48,7 +48,7 @@ li {
     display: none;
     float: left;
     width: 100%;
-    padding-left: 50px;
+    padding-left: 5%;
 }
 
 H1 {
@@ -100,6 +100,12 @@ input[type="button"] {
     border-width: 0px;
 }
 
+.submitButton {
+    background-color: var(--heading);
+    color: var(--primary);
+    border-width: 0px;
+}
+
 .FormData:hover {
     background-color: var(--seondary);
 }
@@ -144,4 +150,16 @@ input[type="button"] {
 .projectGallery {
     float: left;
     display: inline-flex;
+}
+
+.homeTitle {
+    padding-left: 5%;
+}
+
+.titleName {
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--heading);
+    margin-top: 0px;
+    margin-bottom:0px;
 }
