@@ -69,6 +69,17 @@ input[type="text"] {
     width: 600px;
     height: 50px;
     padding: 10px;
+    font-family: Cambria;
+}
+
+textarea {
+    font-size: 15px;
+    margin-bottom: 25px;
+    width: 600px;
+    padding: 10px;
+    resize: vertical;
+    height: 300px;
+    font-family: Cambria;
 }
 
 input[type="button"] {
@@ -121,6 +132,12 @@ input[type="button"] {
     height: 500px;
     border:1px solid var(--text);
     float: left;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.projectTIle:hover {
+    transform: translate3d(0px, -40px, 0px);
 }
 
 .projectThumbnail {
@@ -129,7 +146,7 @@ input[type="button"] {
 }
 
 .projectTools {
-    padding-top: 25px;
+    padding-top: 10px;
     padding-left: 10px;
 }
 

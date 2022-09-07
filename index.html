@@ -6,10 +6,9 @@
 
 <body>
     <ul>
-        <li style="float:left"> <button class="navButton" onclick="displayHome()">Harsh Patel</button> </li>
+        <li style="float:left"><button class="navButton" onclick="displayHome()">Harsh Patel</button> </li>
         <li><button class="navButton" onclick="displayContact()">Contact</button></li>
         <li><button class="navButton" onclick="displayProjects()">Projects</button></li>
-        <li><button class="navButton" onclick="displayAbout()">About</button></li>
     </ul>
 
     <script>
@@ -48,7 +47,7 @@
         <script>
             var i = 0
             var text = "This is a sample"
-            var speed = 100
+            var speed = 50
 
             function writeText() {
                 if (i < text.length) {
@@ -56,7 +55,6 @@
                     i++;
                     setTimeout(writeText, speed);
                 }
-
                 else {
                     setTimeout(deleteText, speed);
                 }
@@ -68,7 +66,6 @@
                     i--;
                     setTimeout(deleteText, speed);
                 }
-
                 else {
                     setTimeout(writeText, speed);
                 }
@@ -78,15 +75,15 @@
     </div>
     <div class="projects" id="projects">
         <div class="projectsGallery">
-            <h1>Projects I've Worked On</h1>
-            <p>TODO: add link to tile leading to the github repository for each project</p>
+            <h1 style="margin-bottom: 50px">Projects I've Worked On</h1>
 
-            <div class="projectTile">
+            <div class="projectTile" onclick="window.open('https://github.com/harshp14/TripLight')">
                 <img src="Images/triplightThumbnail.png" class="projectThumbnail">
                 <H2 style="margin-bottom: 0px; padding-left: 10px;">Triplight</H2>
                 <p style="margin-top: 0px; padding-left: 10px;">
-                    Some information about triplight. Ideally this will take 3-5 lines.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    TripLight is a financial management tool aimed at fairly distrubting costs for group trips.
+                    Triplight stores information about all financial costs of a trip, and equally redistributes the costs
+                    to each individaul at the end of a trip to ensure a fair contribution from everyone.
                 </p>
                 <div class="projectTools">
                     <p class="projectTool">Python</p>
@@ -96,16 +93,30 @@
                 </div>
             </div>
 
-            <div class="projectTile">
+            <div class="projectTile" onclick="window.open('https://github.com/harshp14/Auto-Auction')">
                 <img src="Images/autoauctionThumbnail.png" class="projectThumbnail">
                 <H2 style="margin-bottom: 0px; padding-left: 10px;">Auto Auction</H2>
                 <p style="margin-top: 0px; padding-left: 10px;">
-                    Some information about auto auction. Ideally this will take 3-5 lines.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Auto Auction is an online auctioning platform that allows customers to create auctions and bid on
+                    them in a safe and secure manner. Designed for fast and simple sales, each product is shipped out
+                    and paid after a pre-defined amount of time listed by the seller.
                 </p>
                 <div class="projectTools">
                     <p class="projectTool">Python</p>
                     <p class="projectTool">HTTPS</p>
+                </div>
+            </div>
+
+            <div class="projectTile" onclick="window.open('https://github.com/harshp14/CovidTracker')">
+                <img src="Images/covidTrackerTHumbnail.PNG" class="projectThumbnail">
+                <H2 style="margin-bottom: 0px; padding-left: 10px;">Covid Tracker</H2>
+                <p style="margin-top: 0px; padding-left: 10px;">
+                    The CovidTracker is a web based tracker of Covid-19, tracking information about current cases,
+                    deaths, vaccinations and more. It is updated in real time and allows users to view stats by country
+                    or by continent.
+                </p>
+                <div class="projectTools">
+                    <p class="projectTool">Angular</p>
                 </div>
             </div>
         </div>
@@ -116,10 +127,15 @@
             <input type='text' placeholder="Last Name" class="FormData" id="lname" style="width: 41%" >
             <input type='text' placeholder="Email" class="FormData" id="email">
             <input type='text' placeholder="Subject" class="FormData" id="subject">
-            <input type='text' placeholder="Message" class="FormData" id="message">
+            <textarea placeholder="Message" class="FormData"></textarea>
             <input type="button" value="Submit" class="SubmitButton" id="submt">
         </div>
-        <div class="contactLinks">Hello</div>
+        <div class="contactLinks">
+            <input type="button" value="Resume" class="SubmitButton" id="submt">
+            <input type="button" value="GitHub" class="SubmitButton" id="submt">
+            <input type="button" value="LinkedIn" class="SubmitButton" id="submt">
+            <input type="button" value="Twitter" class="SubmitButton" id="submt">
+        </div>
     </div>
 
 </body>
