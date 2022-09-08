@@ -39,7 +39,7 @@
     </script>
     <div class="home" id="home">
         <div class="homeTitle">
-            <H1 class="titleName">Harsh Patel</H1>
+            <H1>Harsh Patel</H1>
             <p id="description" class='descriptors' style="height:50px; margin-top: 0px; padding-top:0px;"></p>
 
             <script>
@@ -128,7 +128,7 @@
             <div class="projectTile" onclick="window.open('https://github.com/harshp14/TripLight')">
                 <img src="Images/triplightThumbnail.png" class="projectThumbnail">
                 <H2 style="margin-bottom: 0px; padding-left: 10px;">Triplight</H2>
-                <p style="margin-top: 0px; padding-left: 10px;">
+                <p style="margin-top: 0px; padding: 10px;">
                     TripLight is a financial management tool aimed at fairly distrubting costs for group trips.
                     Triplight stores information about all financial costs of a trip, and equally redistributes the costs
                     to each individaul at the end of a trip to ensure a fair contribution from everyone.
@@ -144,7 +144,7 @@
             <div class="projectTile" onclick="window.open('https://github.com/harshp14/Auto-Auction')">
                 <img src="Images/autoauctionThumbnail.png" class="projectThumbnail">
                 <H2 style="margin-bottom: 0px; padding-left: 10px;">Auto Auction</H2>
-                <p style="margin-top: 0px; padding-left: 10px;">
+                <p style="margin-top: 0px; padding: 10px;">
                     Auto Auction is an online auctioning platform that allows customers to create auctions and bid on
                     them in a safe and secure manner. Designed for fast and simple sales, each product is shipped out
                     and paid after a pre-defined amount of time listed by the seller.
@@ -158,7 +158,7 @@
             <div class="projectTile" onclick="window.open('https://github.com/harshp14/CovidTracker')">
                 <img src="Images/covidTrackerTHumbnail.PNG" class="projectThumbnail">
                 <H2 style="margin-bottom: 0px; padding-left: 10px;">Covid Tracker</H2>
-                <p style="margin-top: 0px; padding-left: 10px;">
+                <p style="margin-top: 0px; padding: 10px;">
                     The CovidTracker is a web based tracker of Covid-19, tracking information about current cases,
                     deaths, vaccinations and more. It is updated in real time and allows users to view stats by country
                     or by continent.
@@ -171,14 +171,17 @@
     </div>
     <div class="contact" id="contact">
         <div class="contactForm">
-            <h1 style="margin-bottom: 50px"> Connect With Me</h1>
-            <input type='text' placeholder="First Name" class="FormData" id="fname" style="width: 40%">
-            <input type='text' placeholder="Last Name" class="FormData" id="lname" style="width: 41%" >
-            <input type='text' placeholder="Email" class="FormData" id="email">
-            <input type='text' placeholder="Subject" class="FormData" id="subject">
-            <textarea placeholder="Message" class="FormData"></textarea>
-            <input type="button" value="Submit" class="SubmitButton" id="submt">
+            <h1 style="margin-bottom: 20px"> Connect With Me</h1>
+            <form action="https://formspree.io/f/xpznqyvl" method="POST">
+                <input type='text' placeholder="First Name" class="FormData" name="firstName" style="width: 40%">
+                <input type='text' placeholder="Last Name" class="FormData" name="lastName" style="width: 41%" >
+                <input type='email' placeholder="Email" class="FormData" name="email">
+                <input type='text' placeholder="Subject" class="FormData" name="subject">
+                <textarea placeholder="Message" class="FormData" name="message"></textarea>
+                <button class="SubmitButton" type="submit">Send</button>
+            </form>
         </div>
+
         <div class="contactLinks">
             <input type="button" value="Resume" class="SubmitButton" id="submt">
             <input type="button" value="GitHub" class="SubmitButton" id="submt">

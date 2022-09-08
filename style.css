@@ -61,7 +61,7 @@ H1 {
     color: var(--heading);
     margin: 0px;
     padding: 0px;
-    margin-bottom: 0px;
+    font-weight: lighter;
 }
 
 H2 {
@@ -81,6 +81,15 @@ input[type="text"] {
     font-family: Cambria;
 }
 
+input[type="email"] {
+    font-size: 15px;
+    margin-bottom: 25px;
+    width: 600px;
+    height: 50px;
+    padding: 10px;
+    font-family: Cambria;
+}
+
 textarea {
     font-size: 15px;
     margin-bottom: 25px;
@@ -91,7 +100,7 @@ textarea {
     font-family: Cambria;
 }
 
-input[type="button"] {
+.submitButton {
     font-size: 15px;
     margin-bottom: 25px;
     width: 600px;
@@ -160,8 +169,7 @@ input[type="button"] {
 }
 
 .projectTools {
-    padding-top: 10px;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 .projectTool {
@@ -190,13 +198,6 @@ input[type="button"] {
     width: 50%;
     padding-bottom: 0px;
     margin-bottom: 0px;
-}
-
-.titleName {
-    color: var(--heading);
-    margin-top: 0px;
-    margin-bottom:0px;
-    display: inline;
 }
 
 .tagcloud {
