@@ -39,40 +39,88 @@
     </script>
     <div class="home" id="home">
         <div class="homeTitle">
-            <p class="titleName">Harsh Patel</p>
-            <p id="description"></p>
-            <button onclick="writeText()">Start</button>
+            <H1 class="titleName">Harsh Patel</H1>
+            <p id="description" class='descriptors' style="height:50px; margin-top: 0px; padding-top:0px;"></p>
+
+            <script>
+                var i = 0
+                var text = [
+                    "Descriptor 1",
+                    "Descriptor 2",
+                    "Descriptor 3"
+                ]
+                var descriptor = 0
+                var speed = 50
+
+                window.onload = writeText();
+
+                function writeText() {
+                    if (i < text[descriptor].length) {
+                        document.getElementById("description").innerHTML += text[descriptor].charAt(i);
+                        i++;
+                        setTimeout(writeText, speed);
+                    }
+                    else {
+                        setTimeout(deleteText, speed);
+                    }
+                }
+
+                function deleteText() {
+                    if (i >= 0) {
+                        document.getElementById("description").innerHTML = text[descriptor].substring(0, i);
+                        i--;
+                        setTimeout(deleteText, speed);
+                    }
+                    else {
+                        cycleDescriptor()
+                        setTimeout(writeText, speed);
+                    }
+                }
+    
+                function cycleDescriptor() {
+                    if (descriptor + 1 == text.length) {
+                        descriptor = 0;
+                    }
+                    else {
+                        descriptor++;
+                    }
+                }
+            </script>
+            <p style="padding-left: 2%; font-size: 20px;">About Me</p>
+            <div>
+                <img src="Images/ProfileIcon.png" style="float:left; padding-right: 2%; width: 20%;">
+                <p style="text-align: left">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
         </div>
+        <div class="experiences">
+            <span class="Sphere"></span>
+            <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"> </script>
+            <script>
+                const Texts = [
+                    'HTML', 'CSS', 'JavaScript',
+                    'Angular', 'Vue.js',
+                    'Python', 'Java', "C++",
+                    'Git', 'PostgreSQL'
+                ];
 
-        <script>
-            var i = 0
-            var text = "This is a sample"
-            var speed = 50
+                var tagCloud = TagCloud('.Sphere', Texts, {
+                    radius: 150,
+                    maxSpeed: 'normal',
+                    initSpeed: 'slow',
+                    direction: 135,
+                    keep: true
 
-            function writeText() {
-                if (i < text.length) {
-                    document.getElementById("description").innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(writeText, speed);
-                }
-                else {
-                    setTimeout(deleteText, speed);
-                }
-            }
-
-            function deleteText() {
-                if (i >= 0) {
-                    document.getElementById("description").innerHTML = text.substring(0, i);
-                    i--;
-                    setTimeout(deleteText, speed);
-                }
-                else {
-                    setTimeout(writeText, speed);
-                }
-            }
-
-</script>
+                });
+            </script>
+        </div>
     </div>
+
     <div class="projects" id="projects">
         <div class="projectsGallery">
             <h1 style="margin-bottom: 50px">Projects I've Worked On</h1>
@@ -123,6 +171,7 @@
     </div>
     <div class="contact" id="contact">
         <div class="contactForm">
+            <h1 style="margin-bottom: 50px"> Connect With Me</h1>
             <input type='text' placeholder="First Name" class="FormData" id="fname" style="width: 40%">
             <input type='text' placeholder="Last Name" class="FormData" id="lname" style="width: 41%" >
             <input type='text' placeholder="Email" class="FormData" id="email">

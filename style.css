@@ -2,6 +2,7 @@
     --primary: #232525;
     --seondary: #333433;
     --heading: #c66a00 ;
+    --headingHover: #ecc62d;
     --text: #dedede;
 }
 
@@ -14,6 +15,7 @@ body {
 ul {
     list-style-type: none;
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
     overflow: hidden;
     background-color: var(--primary);
@@ -28,10 +30,14 @@ li {
     color: var(--heading);
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
     font-size: 20px;
     background-color: var(--primary);
     border-width: 0px;
+    cursor: pointer;
+}
+
+.navButton:hover {
+    color: var(--headingHover)
 }
 
 .about {
@@ -53,6 +59,9 @@ li {
 
 H1 {
     color: var(--heading);
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0px;
 }
 
 H2 {
@@ -115,6 +124,11 @@ input[type="button"] {
     background-color: var(--heading);
     color: var(--primary);
     border-width: 0px;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: var(--headingHover)
 }
 
 .FormData:hover {
@@ -171,12 +185,45 @@ input[type="button"] {
 
 .homeTitle {
     padding-left: 5%;
+    display: inline;
+    float: left;
+    width: 50%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
 .titleName {
-    font-size: 60px;
-    font-weight: bold;
     color: var(--heading);
     margin-top: 0px;
     margin-bottom:0px;
+    display: inline;
+}
+
+.tagcloud {
+    display: inline-block;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: var(--heading);
+    cursor:default;
+  }
+
+  .tagcloud--item:hover {
+    color: var(--headingHover)
+}
+
+.experiences {
+    float: right;
+    display: inline;
+    padding-right: 100px;
+    padding-top: 50px;
+}
+
+.portait {
+    float: left;
+    margin: 10px;
+}
+
+.descriptors {
+    color: var(--heading);
+    font-size: 20px;
 }
