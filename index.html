@@ -40,7 +40,7 @@
     <div class="home" id="home">
         <div class="homeTitle">
             <H1>Harsh Patel</H1>
-            <p id="description" class='descriptors' style="height:50px; margin-top: 0px; padding-top:0px;"></p>
+            <p id="description" class='descriptors'></p>
 
             <script>
                 var i = 0
@@ -76,7 +76,7 @@
                         setTimeout(writeText, speed);
                     }
                 }
-    
+
                 function cycleDescriptor() {
                     if (descriptor + 1 == text.length) {
                         descriptor = 0;
@@ -110,12 +110,11 @@
                 ];
 
                 var tagCloud = TagCloud('.Sphere', Texts, {
-                    radius: 150,
+                    radius: 225,
                     maxSpeed: 'normal',
-                    initSpeed: 'slow',
+                    initSpeed: 'normal',
                     direction: 135,
-                    keep: true
-
+                    keep: false
                 });
             </script>
         </div>
@@ -170,11 +169,11 @@
         </div>
     </div>
     <div class="contact" id="contact">
+        <h1 style="margin-bottom: 20px; padding-left: 5%"> Connect With Me</h1>
         <div class="contactForm">
-            <h1 style="margin-bottom: 20px"> Connect With Me</h1>
             <form action="https://formspree.io/f/xpznqyvl" method="POST">
-                <input type='text' placeholder="First Name" class="FormData" name="firstName" style="width: 40%">
-                <input type='text' placeholder="Last Name" class="FormData" name="lastName" style="width: 41%" >
+                <input type='text' placeholder="First Name" class="FormData" name="firstName" style="width: 44%; margin-right: 2%">
+                <input type='text' placeholder="Last Name" class="FormData" name="lastName" style="width: 44%" >
                 <input type='email' placeholder="Email" class="FormData" name="email">
                 <input type='text' placeholder="Subject" class="FormData" name="subject">
                 <textarea placeholder="Message" class="FormData" name="message"></textarea>
@@ -183,10 +182,13 @@
         </div>
 
         <div class="contactLinks">
-            <input type="button" value="Resume" class="SubmitButton" id="submt">
-            <input type="button" value="GitHub" class="SubmitButton" id="submt">
-            <input type="button" value="LinkedIn" class="SubmitButton" id="submt">
-            <input type="button" value="Twitter" class="SubmitButton" id="submt">
+            <input type="button" value="Resume" class="SocialButton" id="submt">
+            <br>
+            <input type="button" value="GitHub" class="SocialButton" id="submt">
+            <br>
+            <input type="button" value="LinkedIn" class="SocialButton" id="submt">
+            <br>
+            <input type="button" value="Twitter" class="SocialButton" id="submt">
         </div>
     </div>
 

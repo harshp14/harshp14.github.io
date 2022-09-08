@@ -1,8 +1,8 @@
 :root {
-    --primary: #232525;
-    --seondary: #333433;
-    --heading: #c66a00 ;
-    --headingHover: #ecc62d;
+    --primary: #161717;
+    --secondary: #333433;
+    --heading: #33e784 ;
+    --headingHover: #06b254;
     --text: #dedede;
 }
 
@@ -18,12 +18,13 @@ ul {
     margin-bottom: 10px;
     padding: 0;
     overflow: hidden;
-    background-color: var(--primary);
+    background-color: #111111;
     margin-bottom: 15px;
 }
 
 li {
     float: right;
+    background-color: #111111;
 }
 
 .navButton {
@@ -31,13 +32,14 @@ li {
     text-align: center;
     padding: 14px 16px;
     font-size: 20px;
-    background-color: var(--primary);
+    background-color: #111111;
     border-width: 0px;
     cursor: pointer;
 }
 
 .navButton:hover {
-    color: var(--headingHover)
+    color: var(--headingHover);
+    background-color: var(--primary);
 }
 
 .about {
@@ -62,20 +64,22 @@ H1 {
     margin: 0px;
     padding: 0px;
     font-weight: lighter;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 H2 {
-    color: var(--text)
+    color: var(--text);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 P {
-    color: var(--text)
+    color: var(--text);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 input[type="text"] {
     font-size: 15px;
     margin-bottom: 25px;
-    width: 600px;
     height: 50px;
     padding: 10px;
     font-family: Cambria;
@@ -84,7 +88,6 @@ input[type="text"] {
 input[type="email"] {
     font-size: 15px;
     margin-bottom: 25px;
-    width: 600px;
     height: 50px;
     padding: 10px;
     font-family: Cambria;
@@ -103,33 +106,9 @@ textarea {
 .submitButton {
     font-size: 15px;
     margin-bottom: 25px;
-    width: 600px;
+    width: 91%;
     height: 50px;
     padding: 10px;
-}
-
-.contactForm {
-    padding-left: 5%;
-    padding-right: 2%;
-    width: 43%;
-    float:left
-}
-
-.contactLinks {
-    padding-left: 2%;
-    padding-right: 5%;
-    width: 43%;
-    float:left;
-    text-align: right;
-}
-
-.FormData {
-    background-color: var(--primary);
-    color: var(--text);
-    border-width: 0px;
-}
-
-.submitButton {
     background-color: var(--heading);
     color: var(--primary);
     border-width: 0px;
@@ -140,19 +119,49 @@ textarea {
     background-color: var(--headingHover)
 }
 
-.FormData:hover {
-    background-color: var(--seondary);
+.SocialButton {
+    font-size: 15px;
+    margin-bottom: 25px;
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+    background-color: var(--heading);
+    color: var(--primary);
+    border-width: 0px;
+    cursor: pointer;
 }
 
-.FormData:focus {
-    background-color: var(--seondary);
+.SocialButton:hover {
+    background-color: var(--headingHover)
+}
+
+.contactForm {
+    padding-left: 5%;
+    padding-right: 1%;
+    width: 44%;
+    float:left;
+}
+
+.contactLinks {
+    padding-left: 1%;
+    padding-right: 5%;
+    width: 44%;
+    float:left;
+    text-align: left;
+}
+
+.FormData {
+    background-color: var(--secondary);
+    color: var(--text);
+    border-width: 0px;
+    width: 91%
 }
 
 .projectTile {
     border-width: 5px;
-    background-color: #333433;
+    background-color: var(--secondary);
     width: 300px;
-    height: 500px;
+    height: 550px;
     border:1px solid var(--text);
     float: left;
     cursor: pointer;
@@ -184,6 +193,7 @@ textarea {
     margin-top: 0px;
     border-radius: 5px;
     height:auto;
+    color: var(--primary)
 }
 
 .projectGallery {
@@ -203,9 +213,10 @@ textarea {
 .tagcloud {
     display: inline-block;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 21px;
     color: var(--heading);
     cursor:default;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .tagcloud--item:hover {
@@ -226,5 +237,9 @@ textarea {
 
 .descriptors {
     color: var(--heading);
-    font-size: 20px;
+    font-size: 17px;
+    height:50px;
+    margin-top: 0px;
+    padding-top:0px;
+    font-family: 'Courier New', Courier, monospace;
 }
