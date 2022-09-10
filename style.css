@@ -64,12 +64,16 @@ H1 {
     margin: 0px;
     padding: 0px;
     font-weight: lighter;
+    font-size: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 H2 {
     color: var(--text);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    font-size: 20px;
+    text-decoration: underline;
 }
 
 P {
@@ -230,9 +234,12 @@ textarea {
     padding-top: 50px;
 }
 
-.portait {
+.Portrait {
     float: left;
-    margin: 10px;
+    margin: 5px;
+    padding-right: 1%;
+    width: 15%;
+    border-radius: 50%;
 }
 
 .descriptors {
