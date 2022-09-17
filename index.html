@@ -45,9 +45,10 @@
             <script>
                 var i = 0
                 var text = [
-                    "Descriptor 1",
-                    "Descriptor 2",
-                    "Descriptor 3"
+                    "Computer Scientist",
+                    "Avid Hackathon Participant",
+                    "Video Game Enthuasist",
+                    "JDM Aficionado"
                 ]
                 var descriptor = 0
                 var speed = 50
@@ -61,7 +62,7 @@
                         setTimeout(writeText, speed);
                     }
                     else {
-                        setTimeout(deleteText, speed);
+                        setTimeout(deleteText, speed * 10);
                     }
                 }
 
@@ -90,11 +91,13 @@
             <div>
                 <img src="Images/Portrait.png" class='Portrait' style="width: 15%;">
                 <p style="text-align: left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Hi, my name is Harsh Patel. <br> <br>
+                    I am a computer scientist in progress, learning at the University of Toronto. I write code for fun, and love
+                    to join hackathons to cultivate my capabilities. I began programming at the suggestion of a school teacher,
+                    and I loved the concept of bringing my crazy ideas to life on a screen. Some of my experiences include website
+                    and web application development, game development with Unreal Engine, networking and network security.  <br> <br>
+                    Aside from programming, I have an interest in learning about how computer hardware, Japanese cars
+                    from the 80s and 90s, and enjoy playing strategy games such as Teamfight Tactics
                 </p>
             </div>
         </div>
@@ -110,7 +113,7 @@
                 ];
 
                 var tagCloud = TagCloud('.Sphere', Texts, {
-                    radius: Math.max(document.getElementById("tagcloud").offsetWidth / 2, 225),
+                    radius: Math.max(document.getElementById("tagcloud").offsetWidth / 3, 225),
                     maxSpeed: 'normal',
                     initSpeed: 'normal',
                     direction: 135,
@@ -166,10 +169,20 @@
                     <p class="projectTool">Angular</p>
                 </div>
             </div>
+
+            <div class="projectTile" onclick="window.open('https://sites.google.com/view/hnk-alarms/model-home')">
+                <img src="Images/ArduinoHouse.PNG" class="projectThumbnail">
+                <H2 style="margin-bottom: 0px; padding-left: 10px;">Home Alarm System</H2>
+                <p style="margin-top: 0px; padding: 10px;">
+                </p>
+                <div class="projectTools">
+                    <p class="projectTool">Arduino-C</p>
+                </div>
+            </div>
         </div>
     </div>
     <div class="contact" id="contact">
-        <h1 style="margin-bottom: 20px; padding-left: 5%"> Connect With Me</h1>
+        <h1 style="margin-bottom: 50px; padding-left: 5%"> Connect With Me</h1>
         <div class="contactForm">
             <form action="https://formspree.io/f/xpznqyvl" method="POST">
                 <input type='text' placeholder="First Name" class="FormData" name="firstName" style="width: 44%; margin-right: 2%">
@@ -182,13 +195,11 @@
         </div>
 
         <div class="contactLinks">
-            <input type="button" value="Resume" class="SocialButton" id="submt">
+            <button class="SocialButton" onclick="window.open('resume')">Resume</button>
             <br>
-            <input type="button" value="GitHub" class="SocialButton" id="submt">
+            <button class="SocialButton" onclick="window.open('https://www.linkedin.com/in/harsh-patel-472719234/')">LinkedIn</button>
             <br>
-            <input type="button" value="LinkedIn" class="SocialButton" id="submt">
-            <br>
-            <input type="button" value="Twitter" class="SocialButton" id="submt">
+            <button class="SocialButton" onclick="window.open('https://github.com/harshp14')">GitHub</button>
         </div>
     </div>
 
